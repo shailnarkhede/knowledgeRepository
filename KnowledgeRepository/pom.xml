@@ -7,6 +7,7 @@
 	<packaging>war</packaging>
 
 	<properties>
+		<targetJdk>1.7</targetJdk>
 		<spring.version>4.0.0.M1</spring.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j-log4j12.version>1.5.8</slf4j-log4j12.version>
@@ -77,10 +78,20 @@
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${slf4j-log4j12.version}</version>
 		</dependency>
-
-
-
 	</dependencies>
-
+	<build>
+		<finalName>KnowledgeRepository</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>${targetJdk}</source>
+					<target>${targetJdk}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
