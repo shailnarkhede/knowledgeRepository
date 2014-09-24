@@ -23,6 +23,8 @@ ALTER TABLE `knowledge_repository`.`product` CHANGE COLUMN `PARENT_ID` `PARENT_I
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
+ALTER TABLE `knowledge_repository`.`product` ADD COLUMN `FOLDER_PATH` VARCHAR(300) NULL  AFTER `PARENT_ID` ;
+
   
 INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`) VALUES ('1', 'Product 1', null);
 INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`) VALUES ('2', 'Product 2', null);
@@ -38,3 +40,6 @@ INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`)
 INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`) VALUES ('12', 'Product 212', '5');
 INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`) VALUES ('13', 'Product 221', '6');
 INSERT INTO `knowledge_repository`.`product` (`ID`, `PRODUCT_NAME`, `PARENT_ID`) VALUES ('14', 'Product 222', '6');
+
+
+

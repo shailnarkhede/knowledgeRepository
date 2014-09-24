@@ -34,6 +34,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 			Product product = new Product();
 			product.setId(Integer.parseInt(String.valueOf(row.get("ID"))));
 			product.setProductName((String)row.get("PRODUCT_NAME"));
+			product.setFolderPath((String)row.get("FOLDER_PATH"));
 			products.add(product);	
 		}
 	 
@@ -53,6 +54,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 			Product product = new Product();
 			product.setId(Integer.parseInt(String.valueOf(row.get("ID"))));
 			product.setProductName((String)row.get("PRODUCT_NAME"));
+			product.setFolderPath((String)row.get("FOLDER_PATH"));
 			products.add(product);	
 			getChlids(product);
 		}
