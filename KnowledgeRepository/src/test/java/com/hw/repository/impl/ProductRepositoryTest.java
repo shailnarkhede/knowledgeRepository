@@ -15,7 +15,7 @@ import com.hw.vo.Product;
 public class ProductRepositoryTest extends Assert{
 	
 	
-	ProductRepository productRepository = new ProductRepositoryImpl();
+	ProductRepository productRepository;
 	ApplicationContext ac;
 	
 	@Before
